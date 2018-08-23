@@ -16,15 +16,12 @@ dist-tree:
 	mkdir -p -v		$(ROOT)/etc/kerub/local
 	mkdir -p -v		$(ROOT)/etc/kerub/cluster
 
-files: dist-tree files.sh
-	./files.sh $(ROOT) > files
-
-MANIFEST: MANIFEST.json files
+MANIFEST: MANIFEST.json 
 	cat MANIFEST.json | sed -e "s/VERSION/$(PACKAGEVERSION)-$(BUILD_ID)/g" > MANIFEST
 	sh files.sh $(ROOT) >> MANIFEST
 	echo }} >> MANIFEST
 
 clean:
 	rm -rf $(ROOT) 
-	rm -f MANIFEST files *.txz
+	rm -f MANIFEST *.txz
 
