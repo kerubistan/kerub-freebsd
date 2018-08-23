@@ -1,0 +1,37 @@
+{
+  "name": "kerub",
+  "origin": "www/kerub",
+  "version": "VERSION",
+  "comment": "A lightweight IaaS prototype",
+  "maintainer": "laszlo.hornyak@gmail.com",
+  "www": "http://github.com/kerubistan/kerub/",
+  "abi": "FreeBSD:11:*",
+  "arch": "freebsd:11:*",
+  "prefix": "/usr/local",
+  "flatsize": 13178707,
+  "licenselogic": "or",
+  "licenses": [
+	"APACHE20"
+  ],
+  "desc": "A lightweight IaaS prototype",
+  "deps": {
+	"openjdk8": {
+	  "origin": "java/openjdk8",
+	  "version": "8.172.11"
+	},
+	"jetty9": {
+	  "origin": "www/jetty9",
+	  "version": "9.3.9"
+	}
+  },
+  "categories": [
+	"java",
+	"www"
+  ],
+  "users": [
+	"www"
+  ],
+  "groups": [
+	"www"
+  ],
+  "files": {
